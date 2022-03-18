@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Origami Dialog Effect</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+html,
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* IE10 */
+  background: -o-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Opera 11.10+ */
+  background: linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* W3C */
+}
+
+button:focus {
+  outline: none;
+}
+
+.main-ctr {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.dialog-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 249px;
+  width: 369px;
+}
+.dialog-wrapper p {
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 1.5;
+  font-family: "roboto";
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-weight: 300;
+  opacity: 0;
+  color: #999;
+  transition: .45s all ease;
+  pointer-events: none;
+  letter-spacing: 1.5px;
+}
+.dialog-wrapper p.show {
+  opacity: 1;
+}
+.dialog-wrapper .open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 45px;
+  margin-top: -22.5px;
+  margin-left: -80.5px;
+  border: none;
+  background: white;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  transition: .3s all ease;
+  letter-spacing: 1.5px;
+}
+.dialog-wrapper .open.off {
+  pointer-events: none;
+  opacity: 0;
+}
+.dialog-wrapper .close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: -webkit-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* IE10 */
+  background: -o-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Opera 11.10+ */
+  background: linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* W3C */
+  color: white;
+  font-size: 16px;
+  /* box-shadow: 0 1px 6px rgba(0,0,0,0.2); */
+  cursor: pointer;
+}
+.dialog-wrapper svg #step-0,
+.dialog-wrapper svg #step-1,
+.dialog-wrapper svg #step-2,
+.dialog-wrapper svg #step-3,
+.dialog-wrapper svg #step-4 {
+  visibility: hidden;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="main-ctr">
+  <div class="dialog-wrapper">
+    <button class="open">Open Dialog</button>
+    <button class="close">X</button>
+    <p>Hello, it's a me!<br>Mariooooo!</p>
+    <svg width="369" height="249" viewBox="0 0 369 249" xmlns="http://www.w3.org/2000/svg">
+      <g id="Page-1" fill="none" fill-rule="evenodd">
+        <path d="M264.483 102v45h-160v-45h160z" id="step-0" fill="#FFF"/>
+        <path d="M264.483 102v45h-160L-.004-.025 264.483 102z" id="step-1" fill-opacity=".1" fill="#D8D8D8"/>
+        <path d="M369.02-.025L264.484 147h-160L-.004-.025H369.02z" id="step-2" fill-opacity=".2" fill="#D8D8D8"/>
+        <path d="M369.01-.025L264.482 147-.004 249V-.024H369.01z" id="step-3" fill-opacity=".3" fill="#D8D8D8"/>
+        <path d="M.042-.004h368.97v249H-.003l.045-249z" id="step-4" fill-opacity=".4" fill="#D8D8D8"/>
+        <path d="M264.483 102v45h-160v-45h160z" id="box" fill="#FFF"/>
+      </g>
+    </svg>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js'></script>
+<script src='http://codepen.io/balapa/pen/c58fffe58d661ae3d4b168a43eb3b2b8.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

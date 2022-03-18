@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+html,
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* IE10 */
+  background: -o-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Opera 11.10+ */
+  background: linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* W3C */
+}
+
+button:focus {
+  outline: none;
+}
+
+.main-ctr {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.dialog-wrapper {
+  position: relative;
+  display: inline-block;
+  height: 249px;
+  width: 369px;
+}
+.dialog-wrapper p {
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 1.5;
+  font-family: "roboto";
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-weight: 300;
+  opacity: 0;
+  color: #999;
+  transition: .45s all ease;
+  pointer-events: none;
+  letter-spacing: 1.5px;
+}
+.dialog-wrapper p.show {
+  opacity: 1;
+}
+.dialog-wrapper .open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 45px;
+  margin-top: -22.5px;
+  margin-left: -80.5px;
+  border: none;
+  background: white;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  transition: .3s all ease;
+  letter-spacing: 1.5px;
+}
+.dialog-wrapper .open.off {
+  pointer-events: none;
+  opacity: 0;
+}
+.dialog-wrapper .close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: -webkit-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* IE10 */
+  background: -o-linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* Opera 11.10+ */
+  background: linear-gradient(90deg, #1CD8D2 10%, #93EDC7 90%);
+  /* W3C */
+  color: white;
+  font-size: 16px;
+  /* box-shadow: 0 1px 6px rgba(0,0,0,0.2); */
+  cursor: pointer;
+}
+.dialog-wrapper svg #step-0,
+.dialog-wrapper svg #step-1,
+.dialog-wrapper svg #step-2,
+.dialog-wrapper svg #step-3,
+.dialog-wrapper svg #step-4 {
+  visibility: hidden;
+}
